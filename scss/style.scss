@@ -58,8 +58,8 @@ body {
         background-color: rgb(180, 226, 43);
         animation-name: maxSize;
         animation-iteration-count: infinite;
-        animation-duration: 3s;
-        animation-timing-function: 3s;
+        animation-duration: 5s;
+        animation-timing-function: linear;
     }
 }
 
@@ -71,6 +71,19 @@ body {
         background-color: rgb(14, 85, 129);
         border-radius: 50%;
         animation-name: upAndDown;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+    }
+}
+
+.container5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box {
+        background-color: rgb(251, 57, 209);
+        animation-name: rotate;
         animation-iteration-count: infinite;
         animation-duration: 3s;
         animation-timing-function: linear;
@@ -112,13 +125,25 @@ body {
 }
 
 @keyframes maxSize {
-    from {
+    0% {
         width: 10px;
         height: 10px;
     }
-    to {
+    25% {
+        width: 50%;
+        height: 50%;
+    }
+    50% {
         width: 100%;
         height: 100%;
+    }
+    75% {
+        width: 50%;
+        height: 50%;
+    }
+    100% {
+        width: 10px;
+        height: 10px;
     }
 }
 
@@ -179,5 +204,14 @@ body {
     }
     100% {
         top: 89px;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform:rotate(360deg)
     }
 }
