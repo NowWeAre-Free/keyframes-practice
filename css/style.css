@@ -29,11 +29,11 @@ body {
   align-items: center;
 }
 .container1__box {
+  background-color: blueviolet;
   animation-name: leftToRight;
   animation-iteration-count: infinite;
   animation-duration: 5s;
   animation-timing-function: 5s;
-  background-color: blueviolet;
 }
 
 .container2 {
@@ -41,11 +41,24 @@ body {
   align-items: center;
 }
 .container2__box {
+  background-color: rgb(43, 226, 141);
   animation-name: eachSide;
   animation-iteration-count: infinite;
   animation-duration: 5s;
   animation-timing-function: 5s;
-  background-color: rgb(43, 226, 141);
+}
+
+.container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container3__box {
+  background-color: rgb(180, 226, 43);
+  animation-name: maxSize;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-timing-function: 3s;
 }
 
 @keyframes leftToRight {
@@ -78,6 +91,16 @@ body {
   100% {
     top: 45px;
     left: 0;
+  }
+}
+@keyframes maxSize {
+  from {
+    width: 10px;
+    height: 10px;
+  }
+  to {
+    width: 100%;
+    height: 100%;
   }
 }
 
