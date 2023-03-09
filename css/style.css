@@ -3,17 +3,18 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: linear-gradient(#4a4444, #7d7d7d);
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
+  grid-template-rows: repeat(4, 100px);
   gap: 50px;
 }
 
 .container {
-  border: 1px solid black;
+  border: 1px solid #fff;
   position: relative;
 }
 
@@ -57,7 +58,7 @@ body {
   background-color: rgb(180, 226, 43);
   animation-name: maxSize;
   animation-iteration-count: infinite;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-timing-function: linear;
 }
 
@@ -126,6 +127,24 @@ body {
   animation-iteration-count: infinite;
 }
 
+.container7 {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container7__box {
+  height: 10px;
+  width: 50px;
+  background-color: rgb(241, 14, 14);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  animation-name: fadeInUp;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
 @keyframes leftToRight {
   from {
     left: 0;
@@ -133,7 +152,7 @@ body {
   }
   to {
     left: 50px;
-    width: 50px;
+    width: 49px;
   }
 }
 @keyframes eachSide {
@@ -227,16 +246,16 @@ body {
     top: 85px;
   }
   75% {
-    top: 89px;
+    top: 88px;
   }
   80% {
-    top: 89px;
+    top: 88px;
   }
   90% {
-    top: 89px;
+    top: 88px;
   }
   100% {
-    top: 89px;
+    top: 88px;
   }
 }
 @keyframes rotate {
@@ -253,7 +272,7 @@ body {
     transform-origin: 50% 50%;
   }
   15% {
-    transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-27px) rotate(-6deg);
   }
   30% {
     transform: translateX(15px) rotate(6deg);
@@ -266,6 +285,16 @@ body {
   }
   75% {
     transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
