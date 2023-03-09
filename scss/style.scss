@@ -1,0 +1,86 @@
+@use './mixins';
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 50px;
+}
+
+.container {
+    border: 1px solid black;
+    position: relative;
+}
+
+.box {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box {
+        animation-name: leftToRight;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+        animation-timing-function: 5s;
+        background-color: blueviolet;
+    }
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    &__box {
+        animation-name: eachSide;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+        animation-timing-function: 5s;
+        background-color: rgb(43, 226, 141);
+    }
+}
+
+
+@keyframes leftToRight {
+    from {
+        left: 0;
+        width: 10px;
+    }
+    to {
+        left: 50px;
+        width: 50px;
+    }
+}
+
+@keyframes eachSide {
+    0% {
+        top: 45px;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 45px;
+    }
+    50% {
+        top: 45px;
+        left:89px;
+    }
+    75% {
+        top: 89px;
+        left: 45px;
+    }
+    100% {
+        top: 45px;
+        left: 0;
+    }
+}
