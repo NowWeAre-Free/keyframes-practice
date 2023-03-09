@@ -82,11 +82,35 @@ body {
     justify-content: center;
     align-items: center;
     &__box {
+        height: 25px;
+        width: 25px;
         background-color: rgb(251, 57, 209);
+        position: relative;
         animation-name: rotate;
         animation-iteration-count: infinite;
         animation-duration: 3s;
         animation-timing-function: linear;
+        border-radius: 10%;
+        &::after{
+            content: '';
+            background-color: inherit;
+            height: 25px;
+            width: 25px;
+            position: absolute;
+            top: -50%;
+            left: 0;
+            border-radius: 50%;
+        }
+        &::before {
+            content: '';
+            background-color: inherit;
+            height: 25px;
+            width: 25px;
+            position: absolute;
+            top: 0;
+            left: -50%;
+            border-radius: 50%
+        }
     }
 }
 
