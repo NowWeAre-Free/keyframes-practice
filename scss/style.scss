@@ -31,10 +31,7 @@ body {
     align-items: center;
     &__box {
         background-color: blueviolet;
-        animation-name: leftToRight;
-        animation-iteration-count: infinite;
-        animation-duration: 5s;
-        animation-timing-function: 5s;
+        animation: leftToRight 5s infinite;
     }
 }
 
@@ -43,10 +40,7 @@ body {
     align-items: center;
     &__box {
         background-color: rgb(43, 226, 141);
-        animation-name: eachSide;
-        animation-iteration-count: infinite;
-        animation-duration: 5s;
-        animation-timing-function: 5s;
+        animation: eachSide 3s infinite;
     }
 }
 
@@ -56,10 +50,7 @@ body {
     align-items: center;
     &__box {
         background-color: rgb(180, 226, 43);
-        animation-name: maxSize;
-        animation-iteration-count: infinite;
-        animation-duration: 3s;
-        animation-timing-function: linear;
+        animation: maxSize 3s infinite linear;
     }
 }
 
@@ -70,10 +61,7 @@ body {
     &__box {
         background-color: rgb(14, 85, 129);
         border-radius: 50%;
-        animation-name: upAndDown;
-        animation-iteration-count: infinite;
-        animation-duration: 3s;
-        animation-timing-function: linear;
+        animation: upAndDown 3s infinite linear;
     }
 }
 
@@ -86,10 +74,7 @@ body {
         width: 25px;
         background-color: rgb(251, 57, 209);
         position: relative;
-        animation-name: rotate;
-        animation-iteration-count: infinite;
-        animation-duration: 3s;
-        animation-timing-function: linear;
+        animation: rotate 3s infinite linear;
         border-radius: 10%;
         &::after{
             content: '';
@@ -123,8 +108,7 @@ body {
         width: 40px;
         border-radius: 10%;
         background-color: rgb(14, 226, 241);
-        animation: wobble-hor-bottom 0.8s both;
-        animation-iteration-count: infinite;
+        animation: wobble-hor-bottom 0.8s both infinite;
     }
 }
 
@@ -138,10 +122,7 @@ body {
         background-color: rgb(241, 14, 14);
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        animation-name: fadeInUp;
-        animation-duration: 2s;
-        animation-fill-mode: both;
-        animation-iteration-count: infinite;
+        animation: fadeInUp 2s infinite;
     }
 }
 
@@ -153,9 +134,7 @@ body {
         height: 99px;
         width: 10px;
         background-color: rgb(241, 241, 14);
-        animation: rightToLeft 2s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        animation: rightToLeft 2s infinite linear;
     }
 }
 
@@ -167,8 +146,7 @@ body {
         height: 50px;
         width: 50px;
         background-color: rgb(14, 14, 241);
-        animation: jello 2s ease 0s 1 normal forwards;
-        animation-iteration-count: infinite;
+        animation: jello 2s ease 0s infinite normal forwards;
     }
 }
 
