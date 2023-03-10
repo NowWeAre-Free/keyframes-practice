@@ -132,7 +132,6 @@ body {
 .container7 {
     display: flex;
     flex-direction: column-reverse;
-    justify-content: flex-start;
     align-items: center;
     &__box {
         height: 10px;
@@ -144,6 +143,20 @@ body {
         animation-duration: 2s;
         animation-fill-mode: both;
         animation-iteration-count: infinite;
+    }
+}
+
+.container8 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    &__box {
+        height: 99px;
+        width: 10px;
+        background-color: rgb(241, 241, 14);
+        animation: rightToLeft 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
     }
 }
 
@@ -304,5 +317,23 @@ body {
     to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes rightToLeft {
+    0% {
+        right: 0
+    }
+    25% {
+        right: 40px;
+    }
+    50% {
+        right: 89px;
+    }
+    75% {
+        right: 40px;
+    }
+    100% {
+        right: 0px;
     }
 }
