@@ -182,7 +182,31 @@ body {
   width: 25px;
   background-color: rgb(255, 255, 255);
   animation: animation10 2s ease 2s infinite alternate both;
-  animation-iteration-count: infinite;
+}
+
+.container11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container11__box {
+  height: 15px;
+  width: 15px;
+  animation: animation11 3s ease 2s infinite alternate both;
+}
+
+.container12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container12__box {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid rgb(255, 129, 2);
+  animation: animation12 2s ease-in-out infinite;
 }
 
 @keyframes leftToRight {
@@ -389,6 +413,44 @@ body {
     transform: scaleY(1);
     transform-origin: 100% 0%;
     opacity: 1;
+  }
+}
+@keyframes animation11 {
+  0% {
+    top: 0px;
+    left: 0px;
+    background: rgb(15, 15, 15);
+  }
+  25% {
+    top: 0px;
+    left: 83px;
+    background: rgb(61, 61, 62);
+  }
+  50% {
+    top: 84px;
+    left: 83px;
+    background: rgb(133, 133, 131);
+  }
+  75% {
+    top: 83px;
+    left: 0px;
+    background: rgb(190, 190, 192);
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    background: rgb(9, 255, 0);
+  }
+}
+@keyframes animation12 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
